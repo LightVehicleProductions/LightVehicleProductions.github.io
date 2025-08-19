@@ -1,0 +1,171 @@
+/* Reset default browser styles */4
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif; /* Font family for the entire website */
+	background: #f9f9f9; /* Light background color */
+	color: #333; /* Dark text color */
+	line-height: 1.6; /* Line height for better readability */
+}
+
+header {
+	background: #111; /* Dark background for the header */
+	color: white; /* White text color */
+	padding: 1rem; /* Padding around the header */
+}
+
+nav {
+	display: flex; /* Flexbox for navigation layout */
+	justify-content: space-between; /* Space between items */
+	align-items: center; /* Center items vertically */
+}
+
+nav ul {
+	list-style: none; /* Remove bullet points from list */
+	display: flex; /* Flexbox for horizontal layout */
+	gap: 1rem; /* Space between navigation items */
+}
+
+nav a {
+	color: white; /* White text color for links */
+	text-decoration: none; /* Remove underline from links */
+	font-weight: bold; /* Bold text for links */
+	transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+	color: #ff5722; /* Change color on hover */
+}
+
+.hero {
+	text-align: center; /* Center text in hero section */
+	padding: 5rem 1rem; /* Padding for the hero section */
+	background: #eee; /* Light background for the hero */
+}
+
+.hero h2 {
+	font-size: 2.5rem; /* Font size for the hero heading */
+}
+
+.btn {
+	display: inline-block; /* Inline block for button */
+	margin-top: 1rem; /* Margin above the button */
+	padding: 0.75rem 1.5rem; /* Padding for button */
+	background: #333; /* Dark background for button */
+	color: white; /* White text color for button */
+	text-decoration: none; /* Remove underline from button */
+	border-radius: 5px; /* Rounded corners for button */
+	transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+	background: #ff5722; /* Change background on hover */
+}
+
+.portfolio {
+	padding: 2rem 1rem; /* Padding for the portfolio section */
+	text-align: center; /* Center text in portfolio section */
+}
+
+.portfolio-items {
+	display: flex; /* Flexbox for portfolio items */
+	justify-content: center; /* Center items horizontally */
+	flex-wrap: wrap; /* Allow items to wrap to the next line */
+	gap: 1rem; /* Space between portfolio items */
+}
+
+.item {
+	background: none; /* White background for each item */
+	border: 0px solid #ddd; /* Light border around items */
+	border-radius: 5px; /* Rounded corners for items */
+	padding: 1rem; /* Padding inside items */
+	width: 1500px; /* Fixed width for items */
+}
+
+/ * Nature Photography Section */
+.nature-photography-items {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item img {
+    width: 100%; /* Set the width to 100% of the parent container */
+    max-width: 1200px; /* Set a maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add some space around the images */
+}
+
+.documentary-work-items {
+     display: flex;
+     flex-direction: colomn;
+     align-items: center;
+}
+
+.video-container {
+     display: flex;
+     justify-content: center;
+     margin: 20px 0
+}
+
+.event-photography-items {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.item img {
+    width: 100%; /* Set the width to 100% of the parent container */
+    max-width: 1200px; /* Set a maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add some space around the images */
+}
+
+.about {
+	padding: 2rem 1rem; /* Padding for the about section */
+	text-align: center; /* Center text in about section */
+}
+
+.contact {
+	padding: 2rem 1rem; /* Padding for the contact section */
+	text-align: center; /* Center text in contact section */
+}
+
+form {
+	max-width: 400px; /* Maximum width for the form */
+	margin: 0 auto; /* Center the form */
+}
+
+label {
+	display: block; /* Block display for labels */
+	margin-bottom: 0.5rem; /* Space below labels */
+}
+
+input, textarea {
+	width: 100%; /* Full width for inputs and textarea */
+	padding: 0.5rem; /* Padding inside inputs */
+	margin-bottom: 1rem; /* Space below inputs */
+	border: 1px solid #ddd; /* Light border for inputs */
+	border-radius: 5px; /* Rounded corners for inputs */
+}
+
+button {
+	background: #333; /* Dark background for button */
+	color: white; /* White text color for button */
+	padding: 0.75rem; /* Padding for button */
+	border: none; /* Remove border */
+	border-radius: 5px; /* Rounded corners for button */
+	cursor: pointer; /* Pointer cursor on hover */
+	transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+	background: #ff5722; /* Change background on hover */
+}
+
+footer {
+	text-align: center; /* Center text in footer */
+	padding: 1rem;

@@ -1,71 +1,60 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Specifies the language of the document -->
+<html lang="en">
 <head>
-	<meta charset="UTF-8" /> <!-- Sets the character encoding for the document -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive design on mobile devices -->
-	<title>Light Vehicle | Portfolio</title> <!-- Title of the webpage that appears in the browser tab -->
-	<link rel="stylesheet" href="style.css" /> <!-- Links to the external CSS file for styling -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Vehicle Productions | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<header>
-		<nav>
-			<h1>Light Vehicle</h1> <!-- Main heading of the website -->
-			<ul>
-				<li><a href="index.html">Home</a></li> <!-- Navigation link to the home page -->
-				<li><a href="portfolio.html">Portfolio</a></li> <!-- Navigation link to the portfolio page -->
-				<li><a href="about.html">About</a></li> <!-- Navigation link to the about page -->
-				<li><a href="contact.html">Contact</a></li> <!-- Navigation link to the contact page -->
-			</ul>
-		</nav>
-	</header>
+    <header>
+        <nav>
+            <h1>Light Vehicle Productions</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main class="hero">
-		<h2>Visual Storyteller</h2> <!-- Subheading for the hero section -->
-		<p>Photography | Video Editing | Digital Art</p> <!-- Description of services offered -->
-		<a href="portfolio.html" class="btn">View My Work</a> <!-- Button linking to the portfolio page -->
-	</main>
+    <main class="hero">
+        <div class="background-slider">
+            <div class="slide" style="background-image: url('IMG_6477.jpg');"></div>
+	<div class="background-slider">
+            <div class="slide" style="background-image: url('IMG_7255.jpg');"></div>
+	<div class="background-slider">
+            <div class="slide" style="background-image: url('linson2.jpg');"></div>
+	<div class="background-slider">
+            <div class="slide" style="background-image: url('_MG_1960.jpg');"></div>
+        </div>
+    </main>
 
-	<section class="portfolio"> <!-- Section for the portfolio -->
-		<h2>My Portfolio</h2> <!-- Heading for the portfolio section -->
-		<div class="portfolio-items"> <!-- Container for portfolio items -->
-			<div class="item"> <!-- Individual portfolio item -->
-				<img src="image1.jpg" alt="Description of image 1" /> <!-- Image with alt text for accessibility -->
-				<p>Project Title 1</p> <!-- Title of the project -->
-			</div>
-			<div class="item"> <!-- Another portfolio item -->
-				<img src="image2.jpg" alt="Description of image 2" />
-				<p>Project Title 2</p>
-			</div>
-			<div class="item"> <!-- Another portfolio item -->
-				<img src="image3.jpg" alt="Description of image 3" />
-				<p>Project Title 3</p>
-			</div>
-		</div>
-	</section>
+    <footer>
+        <p>&copy; 2025 Your Name</p>
+    </footer>
 
-	<section class="about"> <!-- Section for the about information -->
-		<h2>About Me</h2> <!-- Heading for the about section -->
-		<p>Welcome to my photography portfolio! I am passionate about capturing moments and telling stories through my lens.</p> <!-- Description about yourself -->
-	</section>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
 
-	<section class="contact"> <!-- Section for the contact form -->
-		<h2>Contact Me</h2> <!-- Heading for the contact section -->
-		<form action="submit_form.php" method="POST"> <!-- Form for user input -->
-			<label for="name">Name:</label> <!-- Label for the name input -->
-			<input type="text" id="name" name="name" required /> <!-- Text input for name -->
-			
-			<label for="email">Email:</label> <!-- Label for the email input -->
-			<input type="email" id="email" name="email" required /> <!-- Email input for email address -->
-			
-			<label for="message">Message:</label> <!-- Label for the message input -->
-			<textarea id="message" name="message" required></textarea> <!-- Textarea for user message -->
-			
-			<button type="submit">Send Message</button> <!-- Button to submit the form -->
-		</form>
-	</section>
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
 
-	<footer>
-		<p>&copy; 2025 Your Name</p> <!-- Copyright notice -->
-	</footer>
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+        setInterval(nextSlide, 10000); // Change slide every 10 seconds
+    </script>
 </body>
 </html>
